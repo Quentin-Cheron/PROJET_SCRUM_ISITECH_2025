@@ -9,10 +9,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Accueil" },
+    { href: "/about", label: "A propos" },
+    { href: "/reservation", label: "Réservations" },
+    { href: "/blogs", label: "Blogs" },
   ];
 
   return (
@@ -42,11 +42,6 @@ export default function Header() {
             </li>
           ))}
         </ul>
-
-        {/* Desktop CTA Button */}
-        <div className="hidden md:block">
-          <Button>Get Started</Button>
-        </div>
 
         {/* Mobile Menu Button */}
         <button
