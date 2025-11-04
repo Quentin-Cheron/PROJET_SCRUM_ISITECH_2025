@@ -7,7 +7,7 @@ import TimeSelection from "../../components/features/reservation/steps/time-sele
 import UserInfo from "../../components/features/reservation/steps/user-info";
 import Confirmation from "../../components/features/reservation/steps/confirmation";
 
-export default function ReservationPage() {
+export default function ReservationStepsPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
