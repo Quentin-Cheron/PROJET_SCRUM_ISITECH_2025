@@ -97,7 +97,7 @@ export default function ReservationPage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary-foreground">
+    <div className="min-h-screen bg-gray-50">
       {/* Header with event info - Only show before confirmation */}
       {currentStep < 4 && (
         <div className="bg-white border-b border-gray-200 shadow-sm">
