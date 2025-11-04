@@ -1,15 +1,9 @@
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <header className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-          Bienvenue sur notre site <span className="text-blue-600">Synégo</span> 
-        </h1>
-      </header>
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F2E8DC' }}>
 
-      <div className="max-w-7xl mx-auto mt-16">
+      <div className="max-w-7xl mx-auto">
         {/* About Section */}
         <section className="bg-white rounded-2xl shadow-xl p-8 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
