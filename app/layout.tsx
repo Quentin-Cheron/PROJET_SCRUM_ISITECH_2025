@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/features/layout/header";
 import Footer from "@/components/features/layout/footer";
+import ConditionalHeader from "@/components/features/layout/ConditionalHeader";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} antialiased`}
       >
-        <Header />
+        <ConditionalHeader />
         <main>{children}</main>
         <Footer />
       </body>
