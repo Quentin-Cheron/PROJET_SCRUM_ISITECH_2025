@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
-import Footer from "@/components/features/layout/footer";
+import ConditionalFooter from "@/components/features/layout/ConditionalFooter";
 import ConditionalHeader from "@/components/features/layout/ConditionalHeader";
 
 const montserrat = Montserrat({
@@ -19,7 +19,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Synégo",
-  description: "Synégo est un centre de bien-être et de développement personnel",
+  description:
+    "Synégo est un centre de bien-être et de développement personnel",
 };
 
 export default function RootLayout({
@@ -34,7 +35,7 @@ export default function RootLayout({
       >
         <ConditionalHeader />
         <main>{children}</main>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );
