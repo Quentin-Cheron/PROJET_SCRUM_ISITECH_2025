@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Calendar, BookOpen, User, Sparkles, Building2, CreditCard, Phone, Clock } from "lucide-react";
+import { ArrowRight, Calendar, BookOpen, User, Sparkles, Building2, CreditCard, Phone, Clock, Heart } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -301,13 +301,13 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6">
               <div className="flex items-center justify-center mb-3">
-                <Building2 size={28} className="text-[#0A1D35]" />
+                <Heart size={28} className="text-[#0A1D35]" />
               </div>
               <h2 
                 className="text-xl md:text-2xl font-bold text-center mb-3 text-[#0A1D35]"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
               >
-                Notre entreprise
+                Mon parcours
               </h2>
               <div className="space-y-3">
                 <div className="text-center">
@@ -315,13 +315,13 @@ export default function Home() {
                     className="text-sm md:text-base text-[#0A1D35] mb-2"
                     style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                   >
-                    <span className="font-semibold">Créée il y a 3 ans</span>, notre entreprise s'est spécialisée dans l'accompagnement personnalisé vers le bien-être et l'équilibre de vie.
+                    <span className="font-semibold">Depuis 3 ans</span>, je me consacre à l'accompagnement personnalisé vers le bien-être et l'équilibre de vie.
                   </p>
                   <p 
                     className="text-xs md:text-sm text-[#0A1D35] leading-relaxed max-w-3xl mx-auto"
                     style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                   >
-                    Nous proposons une approche holistique combinant acupuncture, shiatsu et acupression pour vous aider à retrouver votre équilibre énergétique et à mieux gérer votre stress au quotidien.
+                    Je vous propose une approche holistique combinant acupuncture, shiatsu et acupression pour vous aider à retrouver votre équilibre énergétique et à mieux gérer votre stress au quotidien.
                   </p>
                 </div>
                 {/* Redirection vers À propos */}
@@ -331,7 +331,7 @@ export default function Home() {
                     className="inline-flex items-center justify-center gap-2 bg-[#0A1D35] hover:bg-[#163554] text-[#F2E8DC] border-2 border-[#0A1D35] hover:border-[#163554] font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#0A1D35]/30"
                     style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                   >
-                    En savoir plus sur nous
+                    En savoir plus sur moi
                     <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
                   </Link>
                 </div>

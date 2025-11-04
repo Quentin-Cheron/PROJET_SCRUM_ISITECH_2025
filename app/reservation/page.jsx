@@ -105,7 +105,7 @@ export default function ReservationPage() {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Rendez-vous avec Chéron Quentin
+                  Rendez-vous avec Tahri Youcef
                 </h1>
                 <p className="text-sm text-gray-600 mt-1">
                   Durée : 1 heure • {getMeetingTypeLabel()}

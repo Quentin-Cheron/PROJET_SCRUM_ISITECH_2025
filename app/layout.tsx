@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/features/layout/header";
 import Footer from "@/components/features/layout/footer";
 import ConditionalHeader from "@/components/features/layout/ConditionalHeader";
 
