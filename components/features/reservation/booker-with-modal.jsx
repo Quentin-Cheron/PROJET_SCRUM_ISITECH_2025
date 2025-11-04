@@ -61,7 +61,7 @@ export default function BookerWithModal({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-[#f2e8dc]/20 py-12 px-4">
+    <div className="min-h-screen bg-secondary py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
