@@ -2,13 +2,13 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import Header from "@/components/features/layout/header";
+import Footer from "@/components/features/layout/footer";
 
-export default function ConditionalHeader() {
+export default function ConditionalFooter() {
   const pathname = usePathname() || "";
 
   const isAdminRoute = pathname.toLowerCase().includes("admin");
 
   if (isAdminRoute) return null;
-  return <Header />;
+  return <Footer />;
 }
