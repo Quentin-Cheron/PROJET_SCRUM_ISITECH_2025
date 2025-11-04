@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} h-screen bg-primary-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} h-screen bg-white`}
       >
         <ConditionalHeader />
         <main>{children}</main>

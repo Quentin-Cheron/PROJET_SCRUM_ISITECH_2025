@@ -1,19 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import {
-  MessageSquare,
-  ChevronLeft,
-  UserCircle,
-  Video,
-  MapPin,
-} from "lucide-react";
+import { ChevronLeft, UserCircle, Video, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-  InputGroupTextarea,
 } from "@/components/ui/input-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
