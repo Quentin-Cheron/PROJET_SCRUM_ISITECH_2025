@@ -42,14 +42,79 @@ export default function ReservationStepsPage() {
   };
 
   const handleSubmit = (formData) => {
+    console.log("🔵 Données du formulaire reçues:", formData);
+    console.log("🔵 Date sélectionnée (selectedDate):", selectedDate);
+    console.log("🔵 Heure sélectionnée (selectedTime):", selectedTime);
+    console.log("🔵 Type de rendez-vous:", meetingType);
+
     const fullBookingData = {
       ...formData,
       date: selectedDate,
       time: selectedTime,
       meetingType: meetingType,
     };
-    setBookingData(fullBookingData);
-    console.log("Réservation complète:", fullBookingData);
+
+    console.log("🔵 fullBookingData avant sauvegarde:", fullBookingData);
+
+    // Sauvegarder dans le localStorage
+    try {
+      // Récupérer les réservations existantes
+      const existingBookings = localStorage.getItem("bookings");
+      let bookings = existingBookings ? JSON.parse(existingBookings) : [];
+
+      // Formater la date pour éviter les problèmes de fuseau horaire
+      // On utilise le format YYYY-MM-DD au lieu de ISO pour garder la date locale
+      const year = selectedDate.getFullYear();
+      const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+      const day = String(selectedDate.getDate()).padStart(2, "0");
+      const formattedDate = `${year}-${month}-${day}`;
+
+      console.log("🟡 Date formatée pour sauvegarde:", formattedDate);
+
+      // Créer un objet de réservation avec un ID unique et la date de création
+      const bookingWithMetadata = {
+        id: `booking-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        createdAt: new Date().toISOString(),
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || "",
+        notes: formData.notes || "",
+        date: formattedDate, // Format YYYY-MM-DD
+        time: selectedTime,
+        meetingType: meetingType,
+      };
+
+      console.log("🟡 Réservation avec métadonnées:", bookingWithMetadata);
+
+      // Ajouter la nouvelle réservation
+      bookings.push(bookingWithMetadata);
+
+      console.log("🟡 Toutes les réservations:", bookings);
+
+      // Sauvegarder dans le localStorage
+      localStorage.setItem("bookings", JSON.stringify(bookings));
+
+      console.log("✅ Réservation sauvegardée dans le localStorage!");
+      console.log(
+        "✅ Vérification - localStorage.bookings:",
+        JSON.parse(localStorage.getItem("bookings")),
+      );
+
+      // Pour l'affichage, on recrée un objet Date à partir de la date formatée
+      const bookingForDisplay = {
+        ...bookingWithMetadata,
+        date: new Date(formattedDate + "T00:00:00"), // Ajouter le temps pour éviter les décalages
+      };
+
+      setBookingData(bookingForDisplay);
+    } catch (error) {
+      console.error(
+        "❌ Erreur lors de la sauvegarde dans le localStorage:",
+        error,
+      );
+      setBookingData(fullBookingData);
+    }
+
     handleNext();
   };
 
@@ -105,7 +170,7 @@ export default function ReservationStepsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Rendez-vous avec Chéron Quentin
+                  Rendez-vous avec Tahry Youcef
                 </h1>
                 <p className="text-sm text-gray-600 mt-1">
                   Durée : 1 heure • {getMeetingTypeLabel()}

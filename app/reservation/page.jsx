@@ -7,7 +7,7 @@ import TimeSelection from "../../components/features/reservation/steps/time-sele
 import UserInfo from "../../components/features/reservation/steps/user-info";
 import Confirmation from "../../components/features/reservation/steps/confirmation";
 
-export default function ReservationPage() {
+export default function ReservationStepsPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -42,14 +42,53 @@ export default function ReservationPage() {
   };
 
   const handleSubmit = (formData) => {
+    console.log("Données du formulaire reçues:", formData);
     const fullBookingData = {
       ...formData,
       date: selectedDate,
       time: selectedTime,
       meetingType: meetingType,
     };
-    setBookingData(fullBookingData);
-    console.log("Réservation complète:", fullBookingData);
+
+    // Sauvegarder dans le localStorage
+    try {
+      // Récupérer les réservations existantes
+      const existingBookings = localStorage.getItem("bookings");
+
+      let bookings = existingBookings ? JSON.parse(existingBookings) : [];
+
+      // Créer un objet de réservation avec un ID unique et la date de création
+      const bookingWithMetadata = {
+        id: `booking-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        createdAt: new Date().toISOString(),
+        ...fullBookingData,
+        // Convertir la date en format ISO pour la sauvegarde
+        date: fullBookingData.date.toISOString(),
+      };
+
+      console.log(bookingData);
+
+      // Ajouter la nouvelle réservation
+      bookings.push(bookingWithMetadata);
+
+      // Sauvegarder dans le localStorage
+      localStorage.setItem("bookings", JSON.stringify(bookings));
+
+      // Reconvertir la date ISO en objet Date pour l'affichage
+      const bookingForDisplay = {
+        ...bookingWithMetadata,
+        date: new Date(bookingWithMetadata.date),
+      };
+
+      setBookingData(bookingForDisplay);
+    } catch (error) {
+      console.error(
+        "❌ Erreur lors de la sauvegarde dans le localStorage:",
+        error,
+      );
+      setBookingData(fullBookingData);
+    }
+
     handleNext();
   };
 
@@ -105,7 +144,7 @@ export default function ReservationPage() {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Rendez-vous avec Chéron Quentin
+                  Rendez-vous avec Tahry Youcef
                 </h1>
                 <p className="text-sm text-gray-600 mt-1">
                   Durée : 1 heure • {getMeetingTypeLabel()}
