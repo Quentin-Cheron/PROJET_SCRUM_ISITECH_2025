@@ -56,7 +56,7 @@ export function DateTimePicker({ form, field }: DatePickerProps) {
   return (
     <FormItem className="flex flex-col">
       <FormLabel>
-        {field.name === "startDate" ? "Date de début" : "Date de fin"}
+        {field.name === "startDate" ? "Start Date" : "End Date"}
       </FormLabel>
       <Popover modal={true}>
         <PopoverTrigger asChild>
