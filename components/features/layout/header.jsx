@@ -10,9 +10,10 @@ export default function Header() {
 
   const navLinks = [
     { href: "/", label: "Accueil" },
-    { href: "/about", label: "A propos" },
     { href: "/reservation", label: "Réservations" },
+    { href: "/entreprises", label: "Offres Entreprises" },
     { href: "/blogs", label: "Blogs" },
+    { href: "/about", label: "A propos" },
   ];
 
   return (
@@ -75,11 +76,6 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li className="pt-4">
-              <Button className="w-full bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35]">
-                Get Started
-              </Button>
-            </li>
           </ul>
         </div>
       )}

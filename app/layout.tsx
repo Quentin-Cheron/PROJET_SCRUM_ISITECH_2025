@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
+import Footer from "@/components/features/layout/footer";
 import ConditionalHeader from "@/components/features/layout/ConditionalHeader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Synégo",
-  description:
-    "Synégo est un centre de bien-être et de développement personnel",
+  description: "Synégo est un centre de bien-être et de développement personnel",
 };
 
 export default function RootLayout({
@@ -28,10 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} h-screen bg-white`}
+        className={`${montserrat.variable} ${poppins.variable} antialiased`}
       >
         <ConditionalHeader />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
