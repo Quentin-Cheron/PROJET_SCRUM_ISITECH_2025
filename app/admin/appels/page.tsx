@@ -643,40 +643,6 @@ export default function Component() {
               </div>
             </PopoverContent>
           </Popover>
-          {/* Toggle columns visibility */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button>
-                <Columns3Icon
-                  className="-ms-1 opacity-60"
-                  size={16}
-                  aria-hidden="true"
-                />
-                View
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Affichage des colonnes</DropdownMenuLabel>
-              {table
-                .getAllColumns()
-                .filter((column) => column.getCanHide())
-                .map((column) => {
-                  return (
-                    <DropdownMenuCheckboxItem
-                      key={column.id}
-                      className="capitalize"
-                      checked={column.getIsVisible()}
-                      onCheckedChange={(value) =>
-                        column.toggleVisibility(!!value)
-                      }
-                      onSelect={(event) => event.preventDefault()}
-                    >
-                      {column.columnDef.header}
-                    </DropdownMenuCheckboxItem>
-                  );
-                })}
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
         <div className="flex items-center gap-3">
           {/* Delete button */}
@@ -689,9 +655,12 @@ export default function Component() {
                     size={16}
                     aria-hidden="true"
                   />
-                  Delete
-                  <span className="-me-1 inline-flex h-5 max-h-full items-center rounded border bg-secondary px-1 font-[inherit] text-[0.625rem] font-medium text-muted-foreground/70">
-                    {table.getSelectedRowModel().rows.length}
+                  Supprimer
+                  <span className="-me-1 inline-flex h-5 max-h-full items-center border rounded px-1 font-[inherit] text-xs font-medium text-muted-foreground/70">
+                    {table.getSelectedRowModel().rows.length}{" "}
+                    {table.getSelectedRowModel().rows.length === 1
+                      ? "ligne"
+                      : "lignes"}
                   </span>
                 </Button>
               </AlertDialogTrigger>
@@ -705,22 +674,23 @@ export default function Component() {
                   </div>
                   <AlertDialogHeader>
                     <AlertDialogTitle>
-                      Are you absolutely sure?
+                      Êtes-vous sûr de vouloir supprimer les lignes
+                      sélectionnées ?
                     </AlertDialogTitle>
                     <AlertDialogDescription>
-                      This action cannot be undone. This will permanently delete{" "}
-                      {table.getSelectedRowModel().rows.length} selected{" "}
+                      Cette action est irréversible. Vous avez{" "}
+                      {table.getSelectedRowModel().rows.length} sélectionnées{" "}
                       {table.getSelectedRowModel().rows.length === 1
-                        ? "row"
-                        : "rows"}
+                        ? "ligne"
+                        : "lignes"}
                       .
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                 </div>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogCancel>Annuler</AlertDialogCancel>
                   <AlertDialogAction onClick={handleDeleteRows}>
-                    Delete
+                    Supprimer
                   </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
@@ -1172,9 +1142,7 @@ export default function Component() {
             >
               Annuler
             </Button>
-            <Button variant="destructive" onClick={handleDeleteCall}>
-              Supprimer
-            </Button>
+            <Button onClick={handleDeleteCall}>Supprimer</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
