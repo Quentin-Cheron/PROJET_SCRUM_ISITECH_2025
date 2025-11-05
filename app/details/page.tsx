@@ -431,39 +431,6 @@ export default function DetailsPage() {
             </div>
           </div>
         </section>
-
-        {/* Navigation rapide */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 text-center">
-          <p 
-            className="text-[#0A1D35] mb-4"
-            style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-          >
-            Explorez nos autres méthodes
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link 
-              href="/details#equilibre-emotionnel"
-              className="inline-flex items-center gap-1 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-4 py-2 rounded-md transition-all text-sm"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
-              Équilibre émotionnel
-            </Link>
-            <Link 
-              href="/details#connaissance-de-soi"
-              className="inline-flex items-center gap-1 bg-gradient-to-r from-[#0A1D35] to-[#163554] hover:from-[#163554] hover:to-[#0A1D35] text-white font-semibold px-4 py-2 rounded-md transition-all text-sm"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
-              Connaissance de soi
-            </Link>
-            <Link 
-              href="/details#harmonie-corporelle"
-              className="inline-flex items-center gap-1 bg-[#D9C9B4] hover:bg-[#C9B9A4] text-[#0A1D35] font-semibold px-4 py-2 rounded-md transition-all text-sm"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
-              Harmonie corporelle
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

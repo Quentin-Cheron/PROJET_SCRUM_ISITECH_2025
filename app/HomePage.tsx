@@ -121,20 +121,20 @@ export default function Home() {
         {/* Services Section */}
         <section 
           ref={(el) => { sectionsRef.current[0] = el; }}
-          className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
+          className="fade-in-section py-4 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
         >
           <div className="max-w-7xl mx-auto">
             <h2 
               className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#0A1D35]"
               style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
             >
-              Nos approches
+              Mes approches
             </h2>
             <p 
               className="text-sm md:text-base text-center mb-6 text-[#0A1D35] max-w-2xl mx-auto"
               style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
             >
-              Découvrez nos méthodes pour votre bien-être
+              Découvre mes méthodes pour ton bien-être et ton équilibre
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
@@ -204,7 +204,7 @@ export default function Home() {
                   className="text-sm text-[#0A1D35] mb-2 text-center italic"
                   style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                 >
-                  Révéler la nature profonde
+                  Révéler ta nature profonde
                 </p>
                 <p 
                   className="text-xs md:text-sm text-[#0A1D35] mb-2 text-center leading-relaxed"
@@ -216,7 +216,7 @@ export default function Home() {
                   className="text-sm md:text-base text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow"
                   style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                 >
-                  Comprendre vos mécanismes, vos motivations et votre fonctionnement unique pour être aligné.
+                  Comprendre tes mécanismes, tes motivations et ton fonctionnement unique pour être aligné.
                 </p>
                 <Link 
                   href="/details#connaissance-de-soi"
@@ -249,7 +249,7 @@ export default function Home() {
                   className="text-xs text-[#0A1D35] mb-2 text-center italic"
                   style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                 >
-                  Restaurer le flux énergétique
+                  Restaurer le flux énergétique et ton bien-être
                 </p>
                 <p 
                   className="text-xs text-[#0A1D35] mb-2 text-center leading-relaxed"
@@ -261,7 +261,7 @@ export default function Home() {
                   className="text-xs md:text-sm text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow"
                   style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                 >
-                  Relancer l'énergie vitale, soulager les tensions physiques, améliorer le sommeil et le bien-être général.
+                  Relancer l'énergie vitale, soulager les tensions physiques, améliorer ton sommeil et ton bien-être général.
                 </p>
                 <Link 
                   href="/details#harmonie-corporelle"
@@ -279,24 +279,13 @@ export default function Home() {
             >
               * <Link href="/entreprises" className="underline hover:text-[#6CAED6] transition-colors">Des offres sont également disponibles pour les entreprises</Link> sous forme de devis personnalisés.
             </p>
-            {/* Redirection vers Blog */}
-            <div className="flex justify-center mt-5">
-              <Link 
-                href="/blogs"
-                className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30"
-                style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-              >
-                Découvrir nos articles
-                <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
-              </Link>
-            </div>
           </div>
         </section>
 
         {/* Presentation Section */}
         <section 
           ref={(el) => { sectionsRef.current[1] = el; }}
-          className="fade-in-section py-8 px-4 bg-[#F2E8DC]"
+          className="fade-in-section py-8 px-4 bg-[#F2E8DC] mb-10"
         >
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6">
@@ -343,7 +332,7 @@ export default function Home() {
         {/* Additional Info Section */}
         <section 
           ref={(el) => { sectionsRef.current[2] = el; }}
-          className="fade-in-section py-8 px-4 bg-[#0A1D35] text-[#F2E8DC]"
+          className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC] text-[#0A1D35]"
         >
           <div className="max-w-6xl mx-auto text-center">
             <div className="flex items-center justify-center mb-3">
@@ -353,14 +342,14 @@ export default function Home() {
               className="text-xl md:text-2xl font-bold mb-3"
               style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
             >
-              Votre bien-être est notre priorité
+              Ton bien-être est ma priorité
             </h2>
             <p 
               className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-4"
               style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
             >
-              Nous vous accompagnons dans votre parcours vers l'équilibre et l'épanouissement personnel. 
-              Nos méthodes douces et respectueuses vous aident à retrouver votre harmonie intérieure.
+              Je t'accompagne dans ton parcours vers l'équilibre et l'épanouissement personnel. 
+              Mes méthodes douces et respectueuses t'aident à retrouver ton harmonie intérieure.
             </p>
 
             {/* Redirection vers Réservations */}
@@ -370,78 +359,9 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30"
                 style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
               >
-                Réserver votre séance
+                Réserver ta séance
                 <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section 
-          ref={(el) => { sectionsRef.current[3] = el; }}
-          className="fade-in-section py-8 px-4 bg-[#F2E8DC]"
-        >
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6">
-              <h2 
-                className="text-xl md:text-2xl font-bold text-center mb-4 text-[#0A1D35]"
-                style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-              >
-                Contactez-nous
-              </h2>
-              
-              <div className="space-y-3">
-                {/* Horaires */}
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-2 p-3 bg-[#D0E7F5] rounded-xl">
-                  <Clock size={20} className="text-[#0A1D35] flex-shrink-0" />
-                  <div className="text-center md:text-left">
-                    <h3 
-                      className="text-base font-semibold mb-1 text-[#0A1D35]"
-                      style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 600 }}
-                    >
-                      Horaires
-                    </h3>
-                    <p 
-                      className="text-sm text-[#0A1D35] mb-1"
-                      style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                    >
-                      <strong>9h - 12h / 18h - 22h</strong>
-                    </p>
-                    <p 
-                      className="text-xs text-[#0A1D35]"
-                      style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                    >
-                      Lundi • Mardi • Jeudi • Dimanche
-                    </p>
-                  </div>
-                </div>
-
-                {/* Téléphone */}
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-2 p-3 bg-[#6CAED6] rounded-xl">
-                  <Phone size={20} className="text-white flex-shrink-0" />
-                  <div className="text-center md:text-left">
-                    <h3 
-                      className="text-base font-semibold mb-1 text-white"
-                      style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 600 }}
-                    >
-                      Contact
-                    </h3>
-                    <p 
-                      className="text-sm text-white mb-1"
-                      style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                    >
-                      <strong>06 13 23 33 43</strong>
-                    </p>
-                    <p 
-                      className="text-xs text-white/90"
-                      style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                    >
-                      Seulement par téléphone
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
