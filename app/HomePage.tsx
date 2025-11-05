@@ -121,7 +121,7 @@ export default function Home() {
         {/* Services Section */}
         <section 
           ref={(el) => { sectionsRef.current[0] = el; }}
-          className="fade-in-section py-4 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
+          className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
         >
           <div className="max-w-7xl mx-auto">
             <h2 

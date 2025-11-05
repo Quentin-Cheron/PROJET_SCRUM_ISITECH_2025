@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check-contract": "node scripts/check-contract-template.js",
+    "extract-word": "node scripts/extract-word-content.js",
+    "create-template": "node scripts/create-template-with-variables.js"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -18,14 +21,20 @@
     "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "docx": "^9.5.1",
+    "docxtemplater": "^3.67.3",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.552.0",
     "next": "16.0.1",
+    "pizzip": "^3.2.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

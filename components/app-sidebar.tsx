@@ -18,6 +18,10 @@ const data = {
           title: "Calendrier",
           url: "/admin/calendrier",
         },
+        {
+          title: "Contrats",
+          url: "/dashboard/contrats",
+        },
       ],
     },
   ],

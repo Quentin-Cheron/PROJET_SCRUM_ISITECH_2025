@@ -49,7 +49,6 @@ export default function ReservationStepsPage() {
       meetingType: meetingType,
     };
     setBookingData(fullBookingData);
-    console.log("Réservation complète:", fullBookingData);
     handleNext();
   };
 
