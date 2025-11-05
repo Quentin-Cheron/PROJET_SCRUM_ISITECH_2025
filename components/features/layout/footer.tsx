@@ -1,15 +1,17 @@
 "use client";
 
+import CGUContent from "@/components/features/legal/cgu-content";
+import CGVContent from "@/components/features/legal/cgv-content";
+import MentionsLegalesContent from "@/components/features/legal/mentions-legales-content";
+import Modal from "@/components/ui/modal";
 import Link from "next/link";
 import { useState } from "react";
-import Modal from "@/components/ui/modal";
-import CGVContent from "@/components/features/legal/cgv-content";
-import CGUContent from "@/components/features/legal/cgu-content";
-import MentionsLegalesContent from "@/components/features/legal/mentions-legales-content";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [openModal, setOpenModal] = useState<"cgv" | "cgu" | "mentions" | null>(null);
+  const [openModal, setOpenModal] = useState<"cgv" | "cgu" | "mentions" | null>(
+    null,
+  );
 
   const navLinks = [
     { href: "/", label: "Accueil" },
@@ -32,25 +34,29 @@ export default function Footer() {
           {/* Logo et Description */}
           <div className="lg:col-span-1">
             <div className="inline-block">
-              <img 
-                src="/logoNavbar.svg" 
-                alt="Logo SYNÉGO" 
+              <img
+                src="/logoNavbar.svg"
+                alt="Logo SYNÉGO"
                 className="h-20 w-40 md:w-auto object-contain brightness-0 invert"
               />
             </div>
-            <p 
+            <p
               className="text-sm text-[#D0E7F5] leading-relaxed"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+              style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             >
-              Accompagnement personnalisé vers le bien-être et l'équilibre de vie depuis 3 ans.
+              Accompagnement personnalisé vers le bien-être et l'équilibre de
+              vie depuis 3 ans.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 
+            <h3
               className="text-lg font-bold mb-4 text-[#F2E8DC]"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                fontWeight: 700,
+              }}
             >
               Navigation
             </h3>
@@ -60,7 +66,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-sm text-[#D0E7F5] hover:text-[#6CAED6] transition-colors"
-                    style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+                    style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                   >
                     {link.label}
                   </Link>
@@ -71,9 +77,12 @@ export default function Footer() {
 
           {/* Informations légales */}
           <div>
-            <h3 
+            <h3
               className="text-lg font-bold mb-4 text-[#F2E8DC]"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                fontWeight: 700,
+              }}
             >
               Informations légales
             </h3>
@@ -83,7 +92,7 @@ export default function Footer() {
                   <button
                     onClick={() => setOpenModal(link.id)}
                     className="text-sm text-[#D0E7F5] hover:text-[#6CAED6] transition-colors text-left"
-                    style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+                    style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                   >
                     {link.label}
                   </button>
@@ -94,9 +103,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 
+            <h3
               className="text-lg font-bold mb-4 text-[#F2E8DC]"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                fontWeight: 700,
+              }}
             >
               Contact
             </h3>
@@ -105,21 +117,21 @@ export default function Footer() {
                 <a
                   href="tel:0613233343"
                   className="text-sm text-[#D0E7F5] hover:text-[#6CAED6] transition-colors"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                 >
                   06 13 23 33 43
                 </a>
               </li>
               <li>
-                <p 
+                <p
                   className="text-sm text-[#D0E7F5]"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                 >
                   9h - 12h / 18h - 22h
                 </p>
-                <p 
+                <p
                   className="text-xs text-[#D0E7F5]/80"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                 >
                   Lun • Mar • Jeu • Dim
                 </p>
@@ -131,9 +143,9 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#163554] pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p 
+            <p
               className="text-xs text-[#D0E7F5]/80 text-center md:text-left"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+              style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             >
               © {currentYear} Synégo. Tous droits réservés.
             </p>
@@ -142,24 +154,24 @@ export default function Footer() {
       </div>
 
       {/* Modales */}
-      <Modal 
-        isOpen={openModal === "cgv"} 
+      <Modal
+        isOpen={openModal === "cgv"}
         onClose={() => setOpenModal(null)}
         title="Conditions Générales de Vente"
       >
         <CGVContent />
       </Modal>
 
-      <Modal 
-        isOpen={openModal === "cgu"} 
+      <Modal
+        isOpen={openModal === "cgu"}
         onClose={() => setOpenModal(null)}
         title="Conditions Générales d'Utilisation"
       >
         <CGUContent />
       </Modal>
 
-      <Modal 
-        isOpen={openModal === "mentions"} 
+      <Modal
+        isOpen={openModal === "mentions"}
         onClose={() => setOpenModal(null)}
         title="Mentions légales"
       >
@@ -168,4 +180,3 @@ export default function Footer() {
     </footer>
   );
 }
-
