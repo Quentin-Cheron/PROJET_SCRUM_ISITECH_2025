@@ -1,6 +1,17 @@
 import * as React from "react";
 
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarRail } from "@/components/ui/sidebar";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarRail,
+} from "@/components/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -17,6 +28,10 @@ const data = {
         {
           title: "Calendrier",
           url: "/admin/calendrier",
+        },
+        {
+          title: "Appels",
+          url: "/admin/appels",
         },
       ],
     },
