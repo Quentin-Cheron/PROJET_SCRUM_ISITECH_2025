@@ -33,6 +33,10 @@ const data = {
           title: "Appels",
           url: "/admin/appels",
         },
+        {
+          title: "Retour sur le site",
+          url: "/",
+        },
       ],
     },
   ],
