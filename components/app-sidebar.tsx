@@ -37,6 +37,10 @@ const data = {
           title: "Retour sur le site",
           url: "/",
         },
+        {
+          title: "Contrats",
+          url: "/dashboard/contrats",
+        },
       ],
     },
   ],
