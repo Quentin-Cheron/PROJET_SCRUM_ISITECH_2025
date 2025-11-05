@@ -34,6 +34,10 @@ const data = {
           url: "/admin/appels",
         },
         {
+          title: "Contrats",
+          url: "/admin/contrats",
+        },
+        {
           title: "Retour sur le site",
           url: "/",
         },

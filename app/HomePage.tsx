@@ -112,11 +112,9 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section
-          ref={(el) => {
-            sectionsRef.current[0] = el;
-          }}
-          className="fade-in-section py-4 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
+        <section 
+          ref={(el) => { sectionsRef.current[0] = el; }}
+          className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
         >
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>

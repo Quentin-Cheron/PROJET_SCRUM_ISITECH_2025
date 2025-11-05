@@ -53,7 +53,6 @@ export default function Confirmation({ bookingData }) {
       start: bookingData.date,
       duration: 15,
     };
-    console.log("Ajout au calendrier:", event);
   };
 
   const getMeetingTypeLabel = () => {

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check-contract": "node scripts/check-contract-template.js",
+    "extract-word": "node scripts/extract-word-content.js",
+    "create-template": "node scripts/create-template-with-variables.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -35,11 +38,16 @@
     "date-fns": "^4.1.0",
     "dlx": "^0.2.1",
     "framer-motion": "^12.23.24",
+    "docx": "^9.5.1",
+    "docxtemplater": "^3.67.3",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.552.0",
     "motion": "^12.23.24",
     "next": "16.0.1",
     "pnpm": "^10.20.0",
     "re-resizable": "^6.11.2",
+    "pizzip": "^3.2.0",
     "react": "19.2.0",
     "react-day-picker": "^9.11.1",
     "react-dom": "19.2.0",
@@ -54,6 +62,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
