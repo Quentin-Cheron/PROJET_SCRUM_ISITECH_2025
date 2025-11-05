@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function connaissancePage() {
   return (
-    <body className="bg-secondary">
-      <section id="connaissance-de-soi" className="bg-gradient-to-br m-10 from-[#D0E7F5] via-white to-[#F2E8DC] rounded-2xl shadow-2xl p-6 md:p-8 mb-8 border-2 border-[#6CAED6] scroll-mt-20">
+    <div className="bg-secondary p-10">
+      <section id="connaissance-de-soi" className="bg-gradient-to-br from-[#D0E7F5] via-white to-[#F2E8DC] rounded-2xl shadow-2xl p-6 md:p-8 border-2 border-[#6CAED6]">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#6CAED6] to-[#D0E7F5] flex items-center justify-center overflow-hidden ring-4 ring-[#6CAED6]/30">
             <img src="/bien-etre.jfif" alt="Connaissance de soi" className="w-full h-full object-cover rounded-full" />
@@ -91,6 +91,6 @@ export default function connaissancePage() {
           </div>
         </div>
       </section>
-    </body>
+    </div>
   );
 }
