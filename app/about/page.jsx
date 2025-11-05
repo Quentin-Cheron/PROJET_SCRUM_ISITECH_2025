@@ -6,20 +6,20 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto">
         {/* About Section */}
         <section className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">À propos de moi</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-12 items-center justify-items-center">
+            <div className="space-y-6 max-w-xl mx-auto flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 text-center">À propos de moi</h2>
+              <p className="text-lg text-gray-600 leading-relaxed text-justify">
                 Je suis Tahri Youcef, Coach Thérapeute en cabinet privé Synégo depuis 3 ans, passionné par le potentiel de transformation qui sommeille en chacun de nous.
                 Mon approche est unique : elle combine la rigueur du coaching centré sur l'action, les objectifs et l'avenir 
                 avec la profondeur et la bienveillance de la thérapie, permettant de dénouer les blocages émotionnels et les schémas limitants ancrés dans le passé.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-xl p-6 overflow-hidden">
+            <div className="bg-gray-100 rounded-xl p-6 overflow-hidden max-w-md w-full">
               <img
                 src="Img_youcef.jpg"
                 alt="YoucefTahri - Formateur et Coach"
-                className="w-full h-full object-cover rounded-lg shadow-lg"
+                className="w-full h-[300px] object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -29,15 +29,15 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">En quelques chiffres</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">5</div>
+                <div className="text-4xl font-bold mb-2" style={{ color: '#0A1D35' }}>5</div>
                 <div className="text-lg text-gray-700">années d'expérience</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-4xl font-bold mb-2" style={{ color: '#0A1D35' }}>50+</div>
                 <div className="text-lg text-gray-700">clients satisfaits</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">3</div>
+                <div className="text-4xl font-bold mb-2" style={{ color: '#0A1D35' }}>3</div>
                 <div className="text-lg text-gray-700">diplômes spécialisés</div>
               </div>
             </div>
