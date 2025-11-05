@@ -3,13 +3,14 @@
 import CGUContent from "@/components/features/legal/cgu-content";
 import CGVContent from "@/components/features/legal/cgv-content";
 import MentionsLegalesContent from "@/components/features/legal/mentions-legales-content";
+import FaqContent from "@/components/features/legal/faq-content";
 import Modal from "@/components/ui/modal";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [openModal, setOpenModal] = useState<"cgv" | "cgu" | "mentions" | null>(
+  const [openModal, setOpenModal] = useState<"cgv" | "cgu" | "mentions" | "faq" | null>(
     null,
   );
 
@@ -25,6 +26,7 @@ export default function Footer() {
     { id: "cgv" as const, label: "CGV" },
     { id: "cgu" as const, label: "CGU" },
     { id: "mentions" as const, label: "Mentions légales" },
+    { id: "faq" as const, label: "FAQ" },
   ];
 
   return (
@@ -176,6 +178,14 @@ export default function Footer() {
         title="Mentions légales"
       >
         <MentionsLegalesContent />
+      </Modal>
+
+      <Modal
+        isOpen={openModal === "faq"}
+        onClose={() => setOpenModal(null)}
+        title="FAQ"
+      >
+        <FaqContent />
       </Modal>
     </footer>
   );
