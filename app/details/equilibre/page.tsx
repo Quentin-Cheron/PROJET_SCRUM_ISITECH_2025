@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function equilibrePage() {
   return (
-    <body className="bg-secondary">
-      <section id="equilibre-emotionnel" className="bg-white m-10 rounded-2xl shadow-xl p-6 md:p-8 mb-8 scroll-mt-20">
+    <div className="bg-secondary p-10">
+      <section id="equilibre-emotionnel" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 scroll-mt-20">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-16 h-16 rounded-full bg-[#6CAED6] flex items-center justify-center overflow-hidden">
             <img src="/relaxations.jfif" alt="Equilibre émotionnel" className="w-full h-full object-cover rounded-full" />
@@ -75,6 +75,6 @@ export default function equilibrePage() {
           </div>
         </div>
       </section>
-    </body>
+    </div>
   );
 }

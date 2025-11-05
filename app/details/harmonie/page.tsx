@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function harmoniePage() {
   return (
-    <body className="bg-secondary">
-      <section id="harmonie-corporelle" className="bg-white m-10 rounded-2xl shadow-xl p-6 md:p-8 mb-8 scroll-mt-20">
+    <div className="bg-secondary p-10">
+      <section id="harmonie-corporelle" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 scroll-mt-20">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-16 h-16 rounded-full bg-[#D9C9B4] flex items-center justify-center overflow-hidden">
             <img src="/acupunctures.jfif" alt="Harmonie corporelle" className="w-full h-full object-cover rounded-full" />
@@ -67,6 +67,6 @@ export default function harmoniePage() {
           </div>
         </div>
       </section>
-    </body>
+    </div>
   );
 }
