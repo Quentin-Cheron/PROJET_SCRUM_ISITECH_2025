@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Formation 1 - Connaissance de soi */}
               <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-blue-600 mb-4 text-4xl">�</div>
+                <div className="text-blue-600 mb-4 text-4xl">💪​</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">La connaissance de soi</h3>
                 <p className="text-gray-600 mb-4">Révéler la nature profonde de votre être</p>
                 <div className="text-sm text-gray-500">
