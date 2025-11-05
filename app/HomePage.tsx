@@ -60,7 +60,6 @@ export default function Home() {
     },
   ];
 
-
   return (
     <>
       {/* SEO Meta tags */}
@@ -91,16 +90,10 @@ export default function Home() {
             </div>
 
             {/* Slogan */}
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#0A1D35] animate-slide-up"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-            >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#0A1D35] animate-slide-up" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
               Être enfin soi,
             </h2>
-            <p 
-              className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#0A1D35] mb-8 animate-slide-up-delay"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 600 }}
-            >
+            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#0A1D35] mb-8 animate-slide-up-delay" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600 }}>
               grâce à un accompagnement soigné
             </p>
 
@@ -119,21 +112,17 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section 
-          ref={(el) => { sectionsRef.current[0] = el; }}
+        <section
+          ref={(el) => {
+            sectionsRef.current[0] = el;
+          }}
           className="fade-in-section py-4 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC]"
         >
           <div className="max-w-7xl mx-auto">
-            <h2 
-              className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#0A1D35]"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-            >
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
               Mes approches
             </h2>
-            <p 
-              className="text-sm md:text-base text-center mb-6 text-[#0A1D35] max-w-2xl mx-auto"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
+            <p className="text-sm md:text-base text-center mb-6 text-[#0A1D35] max-w-2xl mx-auto" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
               Découvre mes méthodes pour ton bien-être et ton équilibre
             </p>
 
@@ -142,42 +131,22 @@ export default function Home() {
               <div className="bg-white rounded-2xl p-5 shadow-xl hover:shadow-2xl transition-shadow flex flex-col">
                 <div className="flex items-center justify-center mb-3">
                   <div className="w-16 h-16 rounded-full bg-[#6CAED6] flex items-center justify-center overflow-hidden">
-                    <img 
-                      src="/relaxations.jfif" 
-                      alt="Equilibre émotionnel" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
+                    <img src="/relaxations.jfif" alt="Equilibre émotionnel" className="w-full h-full object-cover rounded-full" />
                   </div>
                 </div>
-                <h3 
-                  className="text-lg md:text-xl font-bold mb-1 text-[#0A1D35] text-center"
-                  style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-                >
+                <h3 className="text-lg md:text-xl font-bold mb-1 text-[#0A1D35] text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
                   Équilibre émotionnel
                 </h3>
-                <p 
-                  className="text-xs text-[#0A1D35] mb-2 text-center italic"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs text-[#0A1D35] mb-2 text-center italic" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Apaiser l'esprit et l'émotionnel
                 </p>
-                <p 
-                  className="text-xs text-[#0A1D35] mb-2 text-center leading-relaxed"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs text-[#0A1D35] mb-2 text-center leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   <span className="font-semibold">Techniques :</span> Hypnothérapie, sophrologie, EFT, dialogue intérieur
                 </p>
-                <p 
-                  className="text-xs md:text-sm text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs md:text-sm text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Libérer les blocages, gérer le stress et l'anxiété, retrouver la sérénité et la clarté mentale.
                 </p>
-                <Link 
-                  href="/details#equilibre-emotionnel"
-                  className="inline-flex items-center justify-center gap-1 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-4 py-2 text-xs md:text-sm rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <Link href="/details/equilibre" className="inline-flex items-center justify-center gap-1 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-4 py-2 text-xs md:text-sm rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   En savoir plus
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
@@ -187,42 +156,22 @@ export default function Home() {
               <div className="relative bg-gradient-to-br from-[#D0E7F5] via-white to-[#F2E8DC] rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#6CAED6] flex flex-col transform hover:scale-105">
                 <div className="flex items-center justify-center mb-3">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#6CAED6] to-[#D0E7F5] flex items-center justify-center overflow-hidden ring-4 ring-[#6CAED6]/30">
-                    <img 
-                      src="/bien-etre.jfif" 
-                      alt="Connaissance de soi" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
+                    <img src="/bien-etre.jfif" alt="Connaissance de soi" className="w-full h-full object-cover rounded-full" />
                   </div>
                 </div>
-                <h3 
-                  className="text-xl md:text-2xl font-bold mb-1 text-[#0A1D35] text-center"
-                  style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-                >
+                <h3 className="text-xl md:text-2xl font-bold mb-1 text-[#0A1D35] text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
                   La connaissance de soi
                 </h3>
-                <p 
-                  className="text-sm text-[#0A1D35] mb-2 text-center italic"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-sm text-[#0A1D35] mb-2 text-center italic" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Révéler ta nature profonde
                 </p>
-                <p 
-                  className="text-xs md:text-sm text-[#0A1D35] mb-2 text-center leading-relaxed"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs md:text-sm text-[#0A1D35] mb-2 text-center leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   <span className="font-semibold">Techniques :</span> MBTI, Ennéagramme, Process Com, Archétypes, dialogue pédagogique, gestion d'apprentissage
                 </p>
-                <p 
-                  className="text-sm md:text-base text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-sm md:text-base text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Comprendre tes mécanismes, tes motivations et ton fonctionnement unique pour être aligné.
                 </p>
-                <Link 
-                  href="/details#connaissance-de-soi"
-                  className="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-[#0A1D35] to-[#163554] hover:from-[#163554] hover:to-[#0A1D35] text-white font-semibold px-5 py-2.5 text-sm md:text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg shadow-md"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <Link href="/details/connaissance" className="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-[#0A1D35] to-[#163554] hover:from-[#163554] hover:to-[#0A1D35] text-white font-semibold px-5 py-2.5 text-sm md:text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg shadow-md" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   En savoir plus
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
@@ -232,59 +181,49 @@ export default function Home() {
               <div className="bg-white rounded-2xl p-5 shadow-xl hover:shadow-2xl transition-shadow flex flex-col">
                 <div className="flex items-center justify-center mb-3">
                   <div className="w-16 h-16 rounded-full bg-[#D9C9B4] flex items-center justify-center overflow-hidden">
-                    <img 
-                      src="/acupunctures.jfif" 
-                      alt="Harmonie corporelle" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
+                    <img src="/acupunctures.jfif" alt="Harmonie corporelle" className="w-full h-full object-cover rounded-full" />
                   </div>
                 </div>
-                <h3 
-                  className="text-lg md:text-xl font-bold mb-1 text-[#0A1D35] text-center"
-                  style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-                >
+                <h3 className="text-lg md:text-xl font-bold mb-1 text-[#0A1D35] text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
                   Harmonie corporelle
                 </h3>
-                <p 
-                  className="text-xs text-[#0A1D35] mb-2 text-center italic"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs text-[#0A1D35] mb-2 text-center italic" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Restaurer le flux énergétique et ton bien-être
                 </p>
-                <p 
-                  className="text-xs text-[#0A1D35] mb-2 text-center leading-relaxed"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs text-[#0A1D35] mb-2 text-center leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   <span className="font-semibold">Techniques :</span> Acupuncture, shiatsu, tuina
                 </p>
-                <p 
-                  className="text-xs md:text-sm text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <p className="text-xs md:text-sm text-[#0A1D35] leading-relaxed text-center mb-4 flex-grow" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   Relancer l'énergie vitale, soulager les tensions physiques, améliorer ton sommeil et ton bien-être général.
                 </p>
-                <Link 
-                  href="/details#harmonie-corporelle"
-                  className="inline-flex items-center justify-center gap-1 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-4 py-2 text-xs md:text-sm rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md"
-                  style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                >
+                <Link href="/details/harmonie" className="inline-flex items-center justify-center gap-1 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-4 py-2 text-xs md:text-sm rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                   En savoir plus
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
-             <p 
-              className="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mb-4 mt-5 italic text-black"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
-              * <Link href="/entreprises" className="underline hover:text-[#6CAED6] transition-colors">Des offres sont également disponibles pour les entreprises</Link> sous forme de devis personnalisés.
+            <p className="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mb-4 mt-5 italic text-black" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+              *{" "}
+              <Link href="/entreprises" className="underline hover:text-[#6CAED6] transition-colors">
+                Des offres sont également disponibles pour les entreprises
+              </Link>{" "}
+              sous forme de devis personnalisés.
             </p>
+            {/* Redirection vers Blog */}
+            <div className="flex justify-center mt-5">
+              <Link href="/blogs" className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                Découvrir nos derniers posts
+                <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Presentation Section */}
-        <section 
-          ref={(el) => { sectionsRef.current[1] = el; }}
+        <section
+          ref={(el) => {
+            sectionsRef.current[1] = el;
+          }}
           className="fade-in-section py-8 px-4 bg-[#F2E8DC] mb-10"
         >
           <div className="max-w-6xl mx-auto">
@@ -292,34 +231,21 @@ export default function Home() {
               <div className="flex items-center justify-center mb-3">
                 <Heart size={28} className="text-[#0A1D35]" />
               </div>
-              <h2 
-                className="text-xl md:text-2xl font-bold text-center mb-3 text-[#0A1D35]"
-                style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-              >
+              <h2 className="text-xl md:text-2xl font-bold text-center mb-3 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
                 Mon parcours
               </h2>
               <div className="space-y-3">
                 <div className="text-center">
-                  <p 
-                    className="text-sm md:text-base text-[#0A1D35] mb-2"
-                    style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                  >
+                  <p className="text-sm md:text-base text-[#0A1D35] mb-2" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                     <span className="font-semibold">Depuis 3 ans</span>, je me consacre à l'accompagnement personnalisé vers le bien-être et l'équilibre de vie.
                   </p>
-                  <p 
-                    className="text-xs md:text-sm text-[#0A1D35] leading-relaxed max-w-3xl mx-auto"
-                    style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                  >
+                  <p className="text-xs md:text-sm text-[#0A1D35] leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                     Je vous propose une approche holistique combinant acupuncture, shiatsu et acupression pour vous aider à retrouver votre équilibre énergétique et à mieux gérer votre stress au quotidien.
                   </p>
                 </div>
                 {/* Redirection vers À propos */}
                 <div className="flex justify-center mt-4 pt-3 border-t border-[#D9C9B4]">
-                  <Link 
-                    href="/about"
-                    className="inline-flex items-center justify-center gap-2 bg-[#0A1D35] hover:bg-[#163554] text-[#F2E8DC] border-2 border-[#0A1D35] hover:border-[#163554] font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#0A1D35]/30"
-                    style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                  >
+                  <Link href="/about" className="inline-flex items-center justify-center gap-2 bg-[#0A1D35] hover:bg-[#163554] text-[#F2E8DC] border-2 border-[#0A1D35] hover:border-[#163554] font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#0A1D35]/30" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                     En savoir plus sur moi
                     <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
                   </Link>
@@ -330,42 +256,33 @@ export default function Home() {
         </section>
 
         {/* Additional Info Section */}
-        <section 
-          ref={(el) => { sectionsRef.current[2] = el; }}
+        <section
+          ref={(el) => {
+            sectionsRef.current[2] = el;
+          }}
           className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC] text-[#0A1D35]"
         >
           <div className="max-w-6xl mx-auto text-center">
             <div className="flex items-center justify-center mb-3">
               <Sparkles size={20} className="text-[#6CAED6]" />
             </div>
-            <h2 
-              className="text-xl md:text-2xl font-bold mb-3"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 700 }}
-            >
+            <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
               Ton bien-être est ma priorité
             </h2>
-            <p 
-              className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-4"
-              style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-            >
-              Je t'accompagne dans ton parcours vers l'équilibre et l'épanouissement personnel. 
-              Mes méthodes douces et respectueuses t'aident à retrouver ton harmonie intérieure.
+            <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+              Je t'accompagne dans ton parcours vers l'équilibre et l'épanouissement personnel. Mes méthodes douces et respectueuses t'aident à retrouver ton harmonie intérieure.
             </p>
 
             {/* Redirection vers Réservations */}
             <div className="flex justify-center">
-              <Link 
-                href="/reservation"
-                className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30"
-                style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-              >
+              <Link href="/reservation" className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
                 Réserver ta séance
                 <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
               </Link>
             </div>
           </div>
         </section>
-    </div>
+      </div>
 
       <style jsx global>{`
         html {
