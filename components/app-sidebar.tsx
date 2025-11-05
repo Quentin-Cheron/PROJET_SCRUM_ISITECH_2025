@@ -34,12 +34,12 @@ const data = {
           url: "/admin/appels",
         },
         {
-          title: "Retour sur le site",
-          url: "/",
+          title: "Contrats",
+          url: "/admin/contrats",
         },
         {
-          title: "Contrats",
-          url: "/dashboard/contrats",
+          title: "Retour sur le site",
+          url: "/",
         },
       ],
     },
