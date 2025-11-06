@@ -6,7 +6,6 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -24,6 +23,10 @@ const data = {
         {
           title: "Accueil",
           url: "/admin",
+        },
+        {
+          title: "Utilisateurs",
+          url: "/admin/utilisateurs",
         },
         {
           title: "Calendrier",
