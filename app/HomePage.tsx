@@ -260,7 +260,7 @@ export default function Home() {
                   
                   {/* CTA Button */}
                   <Link 
-                    href="/ressources" 
+                    href="/ressource" 
                     className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#6CAED6] to-[#5a9bc4] hover:from-[#5a9bc4] hover:to-[#4a8db5] text-white font-bold px-8 py-4 text-base md:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                     style={{ fontFamily: "var(--font-poppins), sans-serif" }}
                   >
