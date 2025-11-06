@@ -86,7 +86,7 @@ export default function Home() {
           <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-6 animate-fade-in">
-              <img src="/logoNavbar.svg" alt="Logo SYNÉGO" className="w-auto h-32 md:h-40 object-contain" />
+              <img src="/LogoNavbar.svg" alt="Logo SYNÉGO" className="w-auto h-32 md:h-40 object-contain" />
             </div>
 
             {/* Slogan */}
