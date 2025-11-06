@@ -49,7 +49,13 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Formation 1 - Connaissance de soi */}
               <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-blue-600 mb-4 text-4xl">💪​</div>
+                <div className="mb-4 w-full h-48 relative">
+                  <img
+                    src="/bien-etre.jfif"
+                    alt="Bien-être et connaissance de soi"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">La connaissance de soi</h3>
                 <p className="text-gray-600 mb-4">Révéler la nature profonde de votre être</p>
                 <div className="text-sm text-gray-500">
@@ -62,7 +68,13 @@ export default function AboutPage() {
 
               {/* Formation 2 - Équilibre émotionnel */}
               <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-blue-600 mb-4 text-4xl">🧘</div>
+                <div className="mb-4 w-full h-48 relative">
+                  <img
+                    src="/relaxations.jfif"
+                    alt="Relaxation et équilibre émotionnel"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Équilibre émotionnel</h3>
                 <p className="text-gray-600 mb-4">Apaiser l'esprit et l'émotionnel</p>
                 <div className="text-sm text-gray-500">
@@ -75,7 +87,13 @@ export default function AboutPage() {
 
               {/* Formation 3 - Harmonie corporelle */}
               <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-blue-600 mb-4 text-4xl">🌟</div>
+                <div className="mb-4 w-full h-48 relative">
+                  <img
+                    src="/acupunctures.jfif"
+                    alt="Acupuncture et harmonie corporelle"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Harmonie corporelle</h3>
                 <p className="text-gray-600 mb-4">Restaurer le flux énergétique</p>
                 <div className="text-sm text-gray-500">
@@ -92,14 +110,15 @@ export default function AboutPage() {
           <div className="mt-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Avis</h2>
               <p className="text-lg font-normal text-gray-700 mb-2 text-center">Nous avons eu de nombreux avis concernant notre cabinet nous donnant une moyenne de</p>
-              <div className="flex justify-center mb-6" aria-hidden="true">
-                <div className="inline-flex items-center text-yellow-500 text-3xl space-x-1">
+              <div className="flex justify-center mb-6 items-center" aria-hidden="true" >
+                <div className="inline-flex items-center text-yellow-500 text-3xl space-x-1 mr-5">
                   <span>★</span>
                   <span>★</span>
                   <span>★</span>
                   <span>★</span>
                   <span>☆</span>
                 </div>
+                <p>(4.5/5)</p>
               </div>
               <span className="sr-only">4,5 sur 5 étoiles</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
