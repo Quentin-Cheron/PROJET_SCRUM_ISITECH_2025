@@ -26,7 +26,10 @@ export default function ressourcePage() {
     setTouched((t) => ({ ...t, [e.target.name]: true }));
   }
 
-  async function downloadPdf(path = "/asset/livret-blanc.pdf", filename = "livret_blanc.pdf") {
+  async function downloadPdf(
+    path = "/asset/livret-blanc.pdf",
+    filename = "livret_blanc.pdf",
+  ) {
     try {
       const res = await fetch(path);
       if (!res.ok) throw new Error("PDF non trouvé");
@@ -43,7 +46,7 @@ export default function ressourcePage() {
     } catch (err) {
       return false;
     }
-  }  
+  }
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setTouched({ prenom: true, nom: true, email: true });
@@ -70,7 +73,9 @@ export default function ressourcePage() {
         }
       } catch {}
     } else {
-      setError("Le téléchargement a échoué. Tu peux réessayer ou ouvrir le livret dans un nouvel onglet.");
+      setError(
+        "Le téléchargement a échoué. Tu peux réessayer ou ouvrir le livret dans un nouvel onglet.",
+      );
     }
   }
 
@@ -78,19 +83,28 @@ export default function ressourcePage() {
     <div className="bg-secondary flex items-center justify-center p-6">
       <div className="w-full max-w-3xl">
         <header className="mb-6 text-center">
-          <h1 className="text-2xl font-bold mb-2">Ressources</h1>
+          <h1 className="text-2xl font-bold mb-2">Ressource</h1>
           <p className="text-sm text-muted-foreground">
-            Bienvenue sur la page des ressources. Ici, tu pourras trouver diverses ressources utiles.
+            Bienvenue sur la page des ressources. Ici, tu pourras trouver
+            diverses ressources utiles.
           </p>
         </header>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 shadow-md" noValidate>
-          <h2 className="text-xl font-semibold mb-2">Dépendance affective — reprendre le contrôle</h2>
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-lg p-6 shadow-md"
+          noValidate
+        >
+          <h2 className="text-xl font-semibold mb-2">
+            Dépendance affective — reprendre le contrôle
+          </h2>
 
           <p className="mb-4 text-sm text-muted-foreground">
-            La dépendance affective peut t'empêcher de vivre sereinement tes relations : anxiété constante, peur de
-            l'abandon, perte d'estime de soi. Notre livret blanc explique simplement comment reconnaître les mécanismes,
-            poser des limites saines et retrouver autonomie émotionnelle.
+            La dépendance affective peut t'empêcher de vivre sereinement tes
+            relations : anxiété constante, peur de l'abandon, perte d'estime de
+            soi. Notre livret blanc explique simplement comment reconnaître les
+            mécanismes, poser des limites saines et retrouver autonomie
+            émotionnelle.
           </p>
 
           <ul className="list-disc pl-5 mb-4 text-sm">
@@ -101,7 +115,10 @@ export default function ressourcePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium mb-1" htmlFor="prenom">
+              <label
+                className="block text-sm font-medium mb-1"
+                htmlFor="prenom"
+              >
                 Prénom
               </label>
               <input
@@ -115,7 +132,9 @@ export default function ressourcePage() {
                 required
               />
               {touched.prenom && form.prenom.trim() === "" && (
-                <p className="text-xs text-red-500 mt-1">Le prénom est requis.</p>
+                <p className="text-xs text-red-500 mt-1">
+                  Le prénom est requis.
+                </p>
               )}
             </div>
 
@@ -155,7 +174,9 @@ export default function ressourcePage() {
               required
             />
             {touched.email && !validateEmail(form.email) && (
-              <p className="text-xs text-red-500 mt-1">Merci de saisir une adresse email valide.</p>
+              <p className="text-xs text-red-500 mt-1">
+                Merci de saisir une adresse email valide.
+              </p>
             )}
           </div>
 
@@ -164,13 +185,14 @@ export default function ressourcePage() {
               type="submit"
               disabled={!isValid || submitting}
               className={`inline-block bg-[#6CAED6] text-white font-semibold px-4 py-2 rounded-md shadow transition ${
-                !isValid || submitting ? "opacity-50 cursor-not-allowed" : "hover:bg-[#5a9bc4]"
+                !isValid || submitting
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-[#5a9bc4]"
               }`}
               aria-disabled={!isValid || submitting}
             >
               {submitting ? "Envoi..." : "Je veux le livret blanc — gratuit"}
             </button>
-
           </div>
 
           {/* Message de succès / erreur */}
@@ -178,7 +200,8 @@ export default function ressourcePage() {
             {downloaded && (
               <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md flex items-center justify-between">
                 <div>
-                  <strong>Téléchargement terminé :</strong> Le document a bien été téléchargé. Vérifie ton dossier de téléchargements.
+                  <strong>Téléchargement terminé :</strong> Le document a bien
+                  été téléchargé. Vérifie ton dossier de téléchargements.
                 </div>
                 <button
                   onClick={() => setDownloaded(false)}

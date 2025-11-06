@@ -1095,60 +1095,6 @@ export default function Component() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="edit-phone">Téléphone *</Label>
-                <Input
-                  id="edit-phone"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  placeholder="+33 6 12 34 56 78"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="edit-enterprise">Entreprise</Label>
-                <Input
-                  id="edit-enterprise"
-                  value={formData.enterprise}
-                  onChange={(e) =>
-                    setFormData({ ...formData, enterprise: e.target.value })
-                  }
-                  placeholder="Nom de l'entreprise"
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="edit-status">Rendez-vous pris</Label>
-              <Select
-                value={formData.status}
-                onValueChange={(value: "Oui" | "Non" | "En attente") =>
-                  setFormData({ ...formData, status: value })
-                }
-              >
-                <SelectTrigger id="edit-status">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="Oui">Oui</SelectItem>
-                  <SelectItem value="Non">Non</SelectItem>
-                  <SelectItem value="En attente">En attente</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="edit-note">Note</Label>
-              <Textarea
-                id="edit-note"
-                value={formData.note}
-                onChange={(e) =>
-                  setFormData({ ...formData, note: e.target.value })
-                }
-                placeholder="Détails de l'appel, demandes spécifiques, disponibilités..."
-                rows={4}
-              />
-            </div>
           </div>
           <DialogFooter>
             <Button
