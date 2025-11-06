@@ -168,19 +168,6 @@ const createColumns = (
     accessorKey: "email",
     size: 250,
   },
-  {
-    id: "actions",
-    header: () => <span className="sr-only">Actions</span>,
-    cell: ({ row }) => (
-      <RowActions
-        row={row}
-        onEdit={() => onEdit(row.original)}
-        onDelete={() => onDelete(row.original)}
-      />
-    ),
-    size: 60,
-    enableHiding: false,
-  },
 ];
 
 export default function Component() {
