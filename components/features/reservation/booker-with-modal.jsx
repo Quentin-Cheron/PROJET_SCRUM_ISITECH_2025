@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import {
@@ -21,31 +21,6 @@ export default function BookerWithModal({
   const [hasVisitedBefore, setHasVisitedBefore] = useState(false);
   const [isVisioModalOpen, setIsVisioModalOpen] = useState(false);
   const [isCabinetModalOpen, setIsCabinetModalOpen] = useState(false);
-
-  useEffect(() => {
-    // Charger le script Cal.com pour l'iframe embed
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://app.cal.com/embed/embed.js";
-    script.async = true;
-
-    if (
-      !document.querySelector(
-        'script[src="https://app.cal.com/embed/embed.js"]',
-      )
-    ) {
-      document.body.appendChild(script);
-    }
-
-    return () => {
-      const existingScript = document.querySelector(
-        'script[src="https://app.cal.com/embed/embed.js"]',
-      );
-      if (existingScript && document.body.contains(existingScript)) {
-        document.body.removeChild(existingScript);
-      }
-    };
-  }, []);
 
   const handleVisioClick = () => {
     setIsVisioModalOpen(true);
@@ -259,8 +234,7 @@ export default function BookerWithModal({
               frameBorder="0"
               allowFullScreen
               className="w-full h-full min-h-[700px] rounded-xl shadow-lg bg-white"
-              data-cal-link={`https://cal.com/${username}/${eventSlugVisio}`}
-              data-cal-config='{"layout":"month_view","hideBranding":true}'
+              title="Calendrier de réservation - Visioconférence"
             />
           </div>
         </DialogContent>
@@ -294,8 +268,7 @@ export default function BookerWithModal({
               frameBorder="0"
               allowFullScreen
               className="w-full h-full min-h-[700px] rounded-xl shadow-lg bg-white"
-              data-cal-link={`https://cal.com/${username}/${eventSlugCabinet}`}
-              data-cal-config='{"layout":"month_view","hideBranding":true}'
+              title="Calendrier de réservation - Cabinet"
             />
           </div>
         </DialogContent>

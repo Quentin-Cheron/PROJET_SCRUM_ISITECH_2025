@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="inline-block">
               <img
-                src="/logoNavbar.svg"
+                src="/LogoNavbar.svg"
                 alt="Logo SYNÉGO"
                 className="h-20 w-40 md:w-auto object-contain brightness-0 invert"
               />

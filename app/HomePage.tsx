@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Calendar, BookOpen, User, Sparkles, Building2, CreditCard, Phone, Clock, Heart } from "lucide-react";
+import { ArrowRight, Calendar, BookOpen, User, Sparkles, Building2, CreditCard, Phone, Clock, Heart, Download, Book, Shield, Users, Leaf, Award, Target, Zap } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-6 animate-fade-in">
-              <img src="/logoNavbar.svg" alt="Logo SYNÉGO" className="w-auto h-32 md:h-40 object-contain" />
+              <img src="/LogoNavbar.svg" alt="Logo SYNÉGO" className="w-auto h-32 md:h-40 object-contain" />
             </div>
 
             {/* Slogan */}
@@ -217,37 +217,159 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Livre Blanc Section */}
+        <section 
+          ref={(el) => { sectionsRef.current[1] = el; }}
+          className="fade-in-section py-12 px-4 bg-gradient-to-br from-[#0A1D35] via-[#163554] to-[#0A1D35] relative overflow-hidden"
+        >
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-10 right-10 w-64 h-64 bg-[#6CAED6]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#D0E7F5]/5 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#6CAED6]/20">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Icon and Visual Element */}
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-[#6CAED6] to-[#0A1D35] rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+                      <Book className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#6CAED6] rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-block mb-3">
+                    <span className="px-4 py-1 bg-[#6CAED6]/20 text-[#0A1D35] text-xs md:text-sm font-semibold rounded-full" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                      📚 Ressource Gratuite
+                    </span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                    Libère-toi de la dépendance affective
+                  </h2>
+                  <p className="text-base md:text-lg text-[#0A1D35] mb-2 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                    <span className="font-semibold">Télécharge gratuitement</span> mon livre blanc complet sur la dépendance affective.
+                  </p>
+                  <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                    Découvre les clés pour comprendre, identifier et transformer tes relations affectives. Un guide pratique pour retrouver ton autonomie émotionnelle et construire des liens sains et épanouissants.
+                  </p>
+                  
+                  {/* CTA Button */}
+                  <Link 
+                    href="/ressource" 
+                    className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#6CAED6] to-[#5a9bc4] hover:from-[#5a9bc4] hover:to-[#4a8db5] text-white font-bold px-8 py-4 text-base md:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                    style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+                  >
+                    <Download className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-bounce" />
+                    Télécharger le livre blanc gratuitement
+                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Link>
+                  
+                  <p className="text-xs text-gray-500 mt-4 italic" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                    ✨ Format PDF • Livraison instantanée • 100% gratuit
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Presentation Section */}
         <section
           ref={(el) => {
-            sectionsRef.current[1] = el;
+            sectionsRef.current[2] = el;
           }}
-          className="fade-in-section py-8 px-4 bg-[#F2E8DC] mb-10"
+          className="fade-in-section py-16 px-4 bg-gradient-to-br from-[#F2E8DC] via-white to-[#D0E7F5] relative overflow-hidden"
         >
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6">
-              <div className="flex items-center justify-center mb-3">
-                <Heart size={28} className="text-[#0A1D35]" />
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-10 right-10 w-72 h-72 bg-[#6CAED6]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#D9C9B4]/15 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center mb-6">
+                <div className="relative">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#0A1D35] to-[#6CAED6] rounded-2xl flex items-center justify-center shadow-2xl transform -rotate-3">
+                    <Heart className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="absolute -top-1 -left-1 w-6 h-6 bg-[#6CAED6] rounded-full animate-pulse"></div>
+                </div>
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-center mb-3 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
                 Mon parcours
               </h2>
-              <div className="space-y-3">
-                <div className="text-center">
-                  <p className="text-sm md:text-base text-[#0A1D35] mb-2" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                    <span className="font-semibold">Depuis 3 ans</span>, je me consacre à l'accompagnement personnalisé vers le bien-être et l'équilibre de vie.
-                  </p>
-                  <p className="text-xs md:text-sm text-[#0A1D35] leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                    Je vous propose une approche holistique combinant acupuncture, shiatsu et acupression pour vous aider à retrouver votre équilibre énergétique et à mieux gérer votre stress au quotidien.
-                  </p>
+              <p className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-[#0A1D35] mb-2" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                <span className="font-semibold text-[#6CAED6]">Depuis 3 ans</span>, je me consacre à l'accompagnement personnalisé vers le bien-être et l'équilibre de vie.
+              </p>
+              <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed text-gray-700" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                Je vous propose une approche holistique combinant acupuncture, shiatsu et acupression pour vous aider à retrouver votre équilibre énergétique et à mieux gérer votre stress au quotidien.
+              </p>
+            </div>
+
+            {/* Stats/Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {/* Stat 1 */}
+              <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#0A1D35]/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0A1D35] to-[#163554] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Award className="w-8 h-8 text-white" />
                 </div>
-                {/* Redirection vers À propos */}
-                <div className="flex justify-center mt-4 pt-3 border-t border-[#D9C9B4]">
-                  <Link href="/about" className="inline-flex items-center justify-center gap-2 bg-[#0A1D35] hover:bg-[#163554] text-[#F2E8DC] border-2 border-[#0A1D35] hover:border-[#163554] font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#0A1D35]/30" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                    En savoir plus sur moi
-                    <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
-                  </Link>
+                <div className="text-3xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  3 ans
                 </div>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  d'expérience dans l'accompagnement personnalisé
+                </p>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#0A1D35]/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#6CAED6] to-[#D0E7F5] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Target className="w-8 h-8 text-[#0A1D35]" />
+                </div>
+                <div className="text-3xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  Holistique
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Approche globale du corps et de l'esprit
+                </p>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#0A1D35]/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#D9C9B4] to-[#F2E8DC] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-[#0A1D35]" />
+                </div>
+                <div className="text-3xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  Équilibre
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Techniques douces pour retrouver ton harmonie
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <div className="inline-block bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-[#0A1D35]/20">
+                <p className="text-lg font-semibold mb-6 text-[#0A1D35]" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Découvre mon histoire et mon approche en détail
+                </p>
+                <Link 
+                  href="/about" 
+                  className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#0A1D35] to-[#163554] hover:from-[#163554] hover:to-[#0A1D35] text-white font-bold px-8 py-4 text-base md:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+                >
+                  <User className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" />
+                  En savoir plus sur moi
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
               </div>
             </div>
           </div>
@@ -256,27 +378,93 @@ export default function Home() {
         {/* Additional Info Section */}
         <section
           ref={(el) => {
-            sectionsRef.current[2] = el;
+            sectionsRef.current[3] = el;
           }}
-          className="fade-in-section py-8 px-4 bg-gradient-to-b from-[#D9C9B4] to-[#F2E8DC] text-[#0A1D35]"
+          className="fade-in-section py-16 px-4 bg-gradient-to-br from-[#F2E8DC] via-[#D0E7F5] to-[#F2E8DC] relative overflow-hidden"
         >
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-3">
-              <Sparkles size={20} className="text-[#6CAED6]" />
-            </div>
-            <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
-              Ton bien-être est ma priorité
-            </h2>
-            <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-              Je t'accompagne dans ton parcours vers l'équilibre et l'épanouissement personnel. Mes méthodes douces et respectueuses t'aident à retrouver ton harmonie intérieure.
-            </p>
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-20 w-96 h-96 bg-[#6CAED6]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#D9C9B4]/20 rounded-full blur-3xl"></div>
+          </div>
 
-            {/* Redirection vers Réservations */}
-            <div className="flex justify-center">
-              <Link href="/reservation" className="inline-flex items-center justify-center gap-2 bg-[#6CAED6] hover:bg-[#5a9bc4] text-[#0A1D35] font-semibold px-6 py-3 text-base rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6CAED6]/30" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                Réserver ta séance
-                <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={18} />
-              </Link>
+          <div className="max-w-7xl mx-auto relative z-10">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center mb-6">
+                <div className="relative">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#6CAED6] to-[#0A1D35] rounded-2xl flex items-center justify-center shadow-2xl transform rotate-3">
+                    <Sparkles className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#6CAED6] rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                Ton bien-être est ma priorité
+              </h2>
+              <p className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-[#0A1D35]" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                Je t'accompagne dans ton parcours vers l'équilibre et l'épanouissement personnel. Mes méthodes douces et respectueuses t'aident à retrouver ton harmonie intérieure.
+              </p>
+            </div>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {/* Feature 1 */}
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#6CAED6]/30">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#6CAED6] to-[#D0E7F5] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Heart className="w-8 h-8 text-[#0A1D35]" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  Approche personnalisée
+                </h3>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Chaque accompagnement est adapté à tes besoins spécifiques et à ton rythme unique.
+                </p>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#6CAED6]/30">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0A1D35] to-[#163554] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  Méthodes douces
+                </h3>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Des techniques respectueuses de ton corps et de ton esprit, sans jugement ni pression.
+                </p>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-[#6CAED6]/30">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#D9C9B4] to-[#F2E8DC] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Leaf className="w-8 h-8 text-[#0A1D35]" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#0A1D35]" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700 }}>
+                  Harmonie durable
+                </h3>
+                <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Un accompagnement qui vise un équilibre profond et durable dans tous les aspects de ta vie.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <div className="inline-block bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-[#6CAED6]/20">
+                <p className="text-lg font-semibold mb-6 text-[#0A1D35]" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+                  Prêt(e) à commencer ton parcours vers le bien-être ?
+                </p>
+                <Link 
+                  href="/reservation" 
+                  className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#6CAED6] to-[#5a9bc4] hover:from-[#5a9bc4] hover:to-[#4a8db5] text-white font-bold px-8 py-4 text-base md:text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+                >
+                  <Calendar className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" />
+                  Réserver ta séance maintenant
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

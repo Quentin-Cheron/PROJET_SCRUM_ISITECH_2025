@@ -25,7 +25,7 @@ export default function Header() {
           className="flex items-center pl-4 transition-opacity hover:opacity-80"
         >
           <img 
-            src="/logoNavbar.svg" 
+            src="/LogoNavbar.svg" 
             alt="Logo SYNÉGO" 
             className="h-14 w-auto md:h-16 object-contain brightness-0 invert"
           />
